@@ -433,34 +433,34 @@
          * @private
          * @interface Highcharts.AnnotationMockLabelOptionsObject
          */ /**
-      * Point instance of the point.
-      * @name Highcharts.AnnotationMockLabelOptionsObject#point
-      * @type {Highcharts.AnnotationMockPoint}
-      */ /**
-         * X value translated to x axis scale.
-         * @name Highcharts.AnnotationMockLabelOptionsObject#x
-         * @type {number|null}
-         */ /**
-        * Y value translated to y axis scale.
-        * @name Highcharts.AnnotationMockLabelOptionsObject#y
-        * @type {number|null}
-        */
+     * Point instance of the point.
+     * @name Highcharts.AnnotationMockLabelOptionsObject#point
+     * @type {Highcharts.AnnotationMockPoint}
+     */ /**
+           * X value translated to x axis scale.
+           * @name Highcharts.AnnotationMockLabelOptionsObject#x
+           * @type {number|null}
+           */ /**
+       * Y value translated to y axis scale.
+       * @name Highcharts.AnnotationMockLabelOptionsObject#y
+       * @type {number|null}
+       */
         /**
          * A mock series instance imitating a real series from a real point.
          * @private
          * @interface Highcharts.AnnotationMockSeries
          */ /**
-      * Whether a series is visible.
-      * @name Highcharts.AnnotationMockSeries#visible
-      * @type {boolean}
-      */ /**
-         * A chart instance.
-         * @name Highcharts.AnnotationMockSeries#chart
-         * @type {Highcharts.Chart}
-         */ /**
-        * @name Highcharts.AnnotationMockSeries#getPlotBox
-        * @type {Function}
-        */
+     * Whether a series is visible.
+     * @name Highcharts.AnnotationMockSeries#visible
+     * @type {boolean}
+     */ /**
+           * A chart instance.
+           * @name Highcharts.AnnotationMockSeries#chart
+           * @type {Highcharts.Chart}
+           */ /**
+       * @name Highcharts.AnnotationMockSeries#getPlotBox
+       * @type {Function}
+       */
         /**
          * Indicates if this is a mock point for an annotation.
          * @name Highcharts.Point#mock
@@ -893,26 +893,26 @@
          * @private
          * @interface Highcharts.AnnotationAnchorObject
          */ /**
-      * Relative to the plot area position
-      * @name Highcharts.AnnotationAnchorObject#relativePosition
-      * @type {Highcharts.BBoxObject}
-      */ /**
-         * Absolute position
-         * @name Highcharts.AnnotationAnchorObject#absolutePosition
-         * @type {Highcharts.BBoxObject}
-         */
+     * Relative to the plot area position
+     * @name Highcharts.AnnotationAnchorObject#relativePosition
+     * @type {Highcharts.BBoxObject}
+     */ /**
+           * Absolute position
+           * @name Highcharts.AnnotationAnchorObject#absolutePosition
+           * @type {Highcharts.BBoxObject}
+           */
         /**
          * @interface Highcharts.AnnotationControllable
          */ /**
-      * @name Highcharts.AnnotationControllable#annotation
-      * @type {Highcharts.Annotation}
-      */ /**
-         * @name Highcharts.AnnotationControllable#chart
-         * @type {Highcharts.Chart}
-         */ /**
-        * @name Highcharts.AnnotationControllable#collection
-        * @type {string}
-        */ /**
+     * @name Highcharts.AnnotationControllable#annotation
+     * @type {Highcharts.Annotation}
+     */ /**
+           * @name Highcharts.AnnotationControllable#chart
+           * @type {Highcharts.Chart}
+           */ /**
+       * @name Highcharts.AnnotationControllable#collection
+       * @type {string}
+       */ /**
         * @private
         * @name Highcharts.AnnotationControllable#controlPoints
         * @type {Array<Highcharts.AnnotationControlPoint>}
@@ -3050,7 +3050,7 @@
                          *
                          * @type {Highcharts.AnnotationDraggableValue}
                          */
-                        draggable: 'xy',
+                        draggable: '',
                         /**
                          * Options for annotation's labels. Each label inherits options
                          * from the labelOptions object. An option from the labelOptions
@@ -3870,18 +3870,18 @@
          *
          * @interface Highcharts.NavigationBindingsOptionsObject
          */ /**
-      * ClassName of the element for a binding.
-      * @name Highcharts.NavigationBindingsOptionsObject#className
-      * @type {string|undefined}
-      */ /**
-         * Last event to be fired after last step event.
-         * @name Highcharts.NavigationBindingsOptionsObject#end
-         * @type {Function|undefined}
-         */ /**
-        * Initial event, fired on a button click.
-        * @name Highcharts.NavigationBindingsOptionsObject#init
-        * @type {Function|undefined}
-        */ /**
+     * ClassName of the element for a binding.
+     * @name Highcharts.NavigationBindingsOptionsObject#className
+     * @type {string|undefined}
+     */ /**
+           * Last event to be fired after last step event.
+           * @name Highcharts.NavigationBindingsOptionsObject#end
+           * @type {Function|undefined}
+           */ /**
+       * Initial event, fired on a button click.
+       * @name Highcharts.NavigationBindingsOptionsObject#init
+       * @type {Function|undefined}
+       */ /**
         * Event fired on first click on a chart.
         * @name Highcharts.NavigationBindingsOptionsObject#start
         * @type {Function|undefined}
@@ -4174,7 +4174,7 @@
                     return;
                 }
                 if (!navigation.nextEvent) {
-                    // Call init method:
+                // Call init method:
                     navigation.currentUserDetails = selectedButton.start.call(navigation, clickEvent);
                     // If steps exists (e.g. Annotations), bind them:
                     if (navigation.currentUserDetails && selectedButton.steps) {
@@ -5175,6 +5175,7 @@
             if (!data) {
                 return;
             }
+            console.log("thgissssssssss",this)
             var navigation = this,
                 chart = navigation.chart,
                 seriesConfig = {
@@ -5276,7 +5277,12 @@
                         },
                         tickPixelInterval: 40,
                         showLastLabel: false,
+                        gridLineColor: '#252525',
+                        gridLineWidth: 0.5,
+                tickAmount: 3,
+                endOnTick: false,
                         labels: {
+                            style: { "fontSize": "18px" },
                             align: 'left',
                             y: -2
                         }
@@ -5285,6 +5291,9 @@
                     navigation.resizeYAxes();
                 }
                 else {
+                    console.log("data",data)
+                    console.log("chart",chart)
+                    console.log("chart.get(data.linkedTo)",chart.get(data.linkedTo))
                     seriesConfig.yAxis = chart.get(data.linkedTo).options.yAxis;
                 }
                 if (indicatorsWithVolume.indexOf(data.type) >= 0) {
@@ -5292,6 +5301,9 @@
                         return series.options.type === 'column';
                     })[0].options.id;
                 }
+                console.log('seriesOptions', seriesConfig)
+                console.log('chartchart', chart)
+
                 chart.addSeries(seriesConfig, false);
             }
 
@@ -5422,24 +5434,27 @@
                     coordsX = this.utils.getAssignedAxis(coords.xAxis),
                     coordsY = this.utils.getAssignedAxis(coords.yAxis);
 
-                this.chart.xAxis[0].update({
-                    crosshair: {
-                        label: {
-                            enabled: true,
-                            format: '{value:.2f}',
-                            style: { "fontSize": "18px" },
-                        }
-                    },
-                });
-                this.chart.yAxis[0].update({
-                    crosshair: {
-                        label: {
-                            enabled: true,
-                            format: '{value:.2f}',
-                            style: { "fontSize": "18px" },
-                        }
-                    },
-                });
+                    var crossHair = document.getElementById("crossHair");
+                    crossHair.type = "text/css";
+                    crossHair.innerHTML = ".highcharts-crosshair,.highcharts-crosshair-label{visibility:visible}";
+                // this.chart.xAxis[0].update({
+                //     crosshair: {
+                //         label: {
+                //             enabled: true,
+                //             format: '{value:.2f}',
+                //             style: { "fontSize": "18px" },
+                //         }
+                //     },
+                // });
+                // this.chart.yAxis[0].update({
+                //     crosshair: {
+                //         label: {
+                //             enabled: true,
+                //             format: '{value:.2f}',
+                //             style: { "fontSize": "18px" },
+                //         }
+                //     },
+                // });
 
                 if (coordsX && coordsY) {
                     options.points.forEach(function (point, index) {
@@ -5680,6 +5695,7 @@
                 // eslint-disable-next-line valid-jsdoc
                 /** @ignore-option */
                 start: function (e) {
+
                     var coords = this.chart.pointer.getCoordinates(e), coordsX = this.utils.getAssignedAxis(coords.xAxis), coordsY = this.utils.getAssignedAxis(coords.yAxis), navigation = this.chart.options.navigation, options;
                     // Exit if clicked out of axes area
                     if (!coordsX || !coordsY) {
@@ -6194,6 +6210,9 @@
                                     }
                                 ]
                             },
+                            pitchfork: {
+                                draggable: ''
+                            },
                             labelOptions: {
                                 style: {
                                     color: palette.neutralColor60
@@ -6202,6 +6221,7 @@
                         },
                             navigation.annotationsOptions,
                             navigation.bindings.elliott3.annotationsOptions);
+                            console.log("options",options)
                     return this.chart.addAnnotation(options);
                 },
                 /** @ignore-option */
@@ -6228,9 +6248,9 @@
                     var coords = this.chart.pointer.getCoordinates(e),
                         coordsX = this.utils.getAssignedAxis(coords.xAxis),
                         coordsY = this.utils.getAssignedAxis(coords.yAxis);
-                            console.log("coordsX",coordsX)
-                            console.log("coordsY",coordsY)
-                            // Exit if clicked out of axes area
+                    console.log("coordsX", coordsX)
+                    console.log("coordsY", coordsY)
+                    // Exit if clicked out of axes area
                     if (!coordsX || !coordsY) {
                         return;
                     }
@@ -6278,7 +6298,7 @@
                         },
                             navigation.annotationsOptions,
                             navigation.bindings.elliott5.annotationsOptions);
-                            console.log("options",options)
+                    console.log("options", options)
                     return this.chart.addAnnotation(options);
                 },
                 /** @ignore-option */

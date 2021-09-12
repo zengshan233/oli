@@ -9,6 +9,7 @@
  */
 'use strict';
 (function (factory) {
+
     if (typeof module === 'object' && module.exports) {
         factory['default'] = factory;
         module.exports = factory;
@@ -176,6 +177,7 @@
                 if (this.chart.isInsidePlot(e.chartX - this.chart.plotLeft, e.chartY - this.chart.plotTop, {
                     visiblePlotOnly: true
                 })) {
+                    this.options.draggable="";
                     var translation_1 = this.mouseMoveToTranslation(e);
                     if (this.options.draggable === 'x') {
                         translation_1.y = 0;
@@ -436,10 +438,10 @@
 * @name Highcharts.AnnotationMockLabelOptionsObject#point
 * @type {Highcharts.AnnotationMockPoint}
 */ /**
-                                            * X value translated to x axis scale.
-                                            * @name Highcharts.AnnotationMockLabelOptionsObject#x
-                                            * @type {number|null}
-                                            */ /**
+                                                                                    * X value translated to x axis scale.
+                                                                                    * @name Highcharts.AnnotationMockLabelOptionsObject#x
+                                                                                    * @type {number|null}
+                                                                                    */ /**
 * Y value translated to y axis scale.
 * @name Highcharts.AnnotationMockLabelOptionsObject#y
 * @type {number|null}
@@ -453,10 +455,10 @@
 * @name Highcharts.AnnotationMockSeries#visible
 * @type {boolean}
 */ /**
-                                            * A chart instance.
-                                            * @name Highcharts.AnnotationMockSeries#chart
-                                            * @type {Highcharts.Chart}
-                                            */ /**
+                                                                                    * A chart instance.
+                                                                                    * @name Highcharts.AnnotationMockSeries#chart
+                                                                                    * @type {Highcharts.Chart}
+                                                                                    */ /**
 * @name Highcharts.AnnotationMockSeries#getPlotBox
 * @type {Function}
 */
@@ -896,26 +898,26 @@
 * @name Highcharts.AnnotationAnchorObject#relativePosition
 * @type {Highcharts.BBoxObject}
 */ /**
-                                            * Absolute position
-                                            * @name Highcharts.AnnotationAnchorObject#absolutePosition
-                                            * @type {Highcharts.BBoxObject}
-                                            */
+                                                                                    * Absolute position
+                                                                                    * @name Highcharts.AnnotationAnchorObject#absolutePosition
+                                                                                    * @type {Highcharts.BBoxObject}
+                                                                                    */
         /**
          * @interface Highcharts.AnnotationControllable
          */ /**
 * @name Highcharts.AnnotationControllable#annotation
 * @type {Highcharts.Annotation}
 */ /**
-                                            * @name Highcharts.AnnotationControllable#chart
-                                            * @type {Highcharts.Chart}
-                                            */ /**
+                                                                                    * @name Highcharts.AnnotationControllable#chart
+                                                                                    * @type {Highcharts.Chart}
+                                                                                    */ /**
 * @name Highcharts.AnnotationControllable#collection
 * @type {string}
 */ /**
-                                             * @private
-                                             * @name Highcharts.AnnotationControllable#controlPoints
-                                             * @type {Array<Highcharts.AnnotationControlPoint>}
-                                             */ /**
+                                                                                     * @private
+                                                                                     * @name Highcharts.AnnotationControllable#controlPoints
+                                                                                     * @type {Array<Highcharts.AnnotationControlPoint>}
+                                                                                     */ /**
 * @name Highcharts.AnnotationControllable#points
 * @type {Array<Highcharts.Point>}
 */
@@ -3054,7 +3056,7 @@
                          *
                          * @type {Highcharts.AnnotationDraggableValue}
                          */
-                        draggable: 'xy',
+                        draggable: '',
                         /**
                          * Options for annotation's labels. Each label inherits options
                          * from the labelOptions object. An option from the labelOptions
@@ -6237,18 +6239,18 @@
 * @name Highcharts.NavigationBindingsOptionsObject#className
 * @type {string|undefined}
 */ /**
-                                            * Last event to be fired after last step event.
-                                            * @name Highcharts.NavigationBindingsOptionsObject#end
-                                            * @type {Function|undefined}
-                                            */ /**
+                                                                                    * Last event to be fired after last step event.
+                                                                                    * @name Highcharts.NavigationBindingsOptionsObject#end
+                                                                                    * @type {Function|undefined}
+                                                                                    */ /**
 * Initial event, fired on a button click.
 * @name Highcharts.NavigationBindingsOptionsObject#init
 * @type {Function|undefined}
 */ /**
-                                             * Event fired on first click on a chart.
-                                             * @name Highcharts.NavigationBindingsOptionsObject#start
-                                             * @type {Function|undefined}
-                                             */ /**
+                                                                                     * Event fired on first click on a chart.
+                                                                                     * @name Highcharts.NavigationBindingsOptionsObject#start
+                                                                                     * @type {Function|undefined}
+                                                                                     */ /**
 * Last event to be fired after last step event. Array of step events to be
 * called sequentially after each user click.
 * @name Highcharts.NavigationBindingsOptionsObject#steps
@@ -6330,24 +6332,24 @@
                     coordsY = chart.navigationBindings.utils.getAssignedAxis(coords.yAxis),
                     width,
                     height;
-                chart.xAxis[0].update({
-                    crosshair: {
-                        label: {
-                            enabled: true,
-                            format: '{value:.2f}',
-                            style: { "fontSize": "18px" },
-                        }
-                    },
-                });
-                chart.yAxis[0].update({
-                    crosshair: {
-                        label: {
-                            enabled: true,
-                            format: '{value:.2f}',
-                            style: { "fontSize": "18px" },
-                        }
-                    },
-                });
+                // chart.xAxis[0].update({
+                //     crosshair: {
+                //         label: {
+                //             enabled: true,
+                //             format: '{value:.2f}',
+                //             style: { "fontSize": "18px" },
+                //         }
+                //     },
+                // });
+                // chart.yAxis[0].update({
+                //     crosshair: {
+                //         label: {
+                //             enabled: true,
+                //             format: '{value:.2f}',
+                //             style: { "fontSize": "18px" },
+                //         }
+                //     },
+                // });
                 if (coordsX && coordsY) {
                     width = coordsX.value - options.point.x;
                     height = options.point.y - coordsY.value;
@@ -6380,7 +6382,27 @@
                         axisMax = coord.axis.max,
                         // Correct axis edges when axis has series
                         // with pointRange (like column)
+
                         minPointOffset = pick(coord.axis.minPointOffset, 0);
+                    // console.log("coord.axis.minPointOffset",coord.axis.minPointOffset)
+                    // console.log("minPointOffset",minPointOffset)
+                    // console.log("coord.value",coord.value)
+                    // console.log("axisMin",axisMin)
+                    // console.log("axisMax",axisMax)
+                    // console.log("axisMin - minPointOffset",axisMin - minPointOffset)
+                    // console.log("axisMax + minPointOffset",axisMax + minPointOffset)
+                    // console.log("date ",new Date(coord.value))
+                    var _isNumberMin = isNumber(axisMin);
+                    var _isNumberMax = isNumber(axisMax);
+                    var one = coord.value >= (axisMin - minPointOffset);
+                    var two = coord.value <= (axisMax + minPointOffset);
+                    var isNotInternal = !coord.axis.options.isInternal
+                    // console.log("_isNumberMin",_isNumberMin)
+                    // console.log("_isNumberMax",_isNumberMax)
+                    // console.log("one",one)
+                    // console.log("two",two)
+                    // console.log("isNotInternal",isNotInternal)
+                    // console.log("--------------------------------------")
                     return isNumber(axisMin) && isNumber(axisMax) &&
                         coord.value >= (axisMin - minPointOffset) &&
                         coord.value <= (axisMax + minPointOffset) &&
@@ -6399,6 +6421,10 @@
              *
              * */
             function NavigationBindings(chart, options) {
+                if (this.chart) {
+                    return;
+                }
+                console.log("chartchartchartchart", chart)
                 this.boundClassNames = void 0;
                 this.selectedButton = void 0;
                 this.chart = chart;
@@ -6556,6 +6582,7 @@
                 }
                 if (!navigation.nextEvent) {
                     // Call init method:
+
                     navigation.currentUserDetails = selectedButton.start.call(navigation, clickEvent);
                     // If steps exists (e.g. Annotations), bind them:
                     if (navigation.currentUserDetails && selectedButton.steps) {
@@ -7289,6 +7316,7 @@
                                 labelOptions: {
                                     format: '{y:.2f}'
                                 },
+                            
                                 labels: [{
                                     point: {
                                         xAxis: coordsX.axis.options.index,
@@ -7508,9 +7536,13 @@
                 closeBtn = createElement(DIV, {
                     className: PREFIX + 'popup-close'
                 }, null, this.container);
+
                 closeBtn.style['background-image'] = 'url(' +
                     (iconsURL.match(/png|svg|jpeg|jpg|gif/ig) ?
                         iconsURL : iconsURL + 'close.svg') + ')';
+
+
+
                 ['click', 'touchstart'].forEach(function (eventName) {
                     addEvent(closeBtn, eventName, function () {
                         if (_self.chart) {
@@ -7619,10 +7651,12 @@
              * @return {Highcharts.PopupFieldsObject} - fields
              */
             getFields: function (parentDiv, type) {
+
                 var inputList = parentDiv.querySelectorAll('input'), optionSeries = '#' + PREFIX + 'select-series > option:checked', optionVolume = '#' + PREFIX + 'select-volume > option:checked', linkedTo = parentDiv.querySelectorAll(optionSeries)[0], volumeTo = parentDiv.querySelectorAll(optionVolume)[0], seriesId, param, fieldsOutput;
+                var linkedToDom = document.getElementById(PREFIX + 'select-series');
                 fieldsOutput = {
                     actionType: type,
-                    linkedTo: linkedTo && linkedTo.getAttribute('value'),
+                    linkedTo: linkedToDom && linkedToDom.linkedTo,
                     fields: {}
                 };
                 [].forEach.call(inputList, function (input) {
@@ -7637,7 +7671,7 @@
                     }
                     else {
                         // type like sma / ema
-                        fieldsOutput.type = input.value;
+                        fieldsOutput.type = input.seriesType || input.value;
                     }
                 });
                 if (volumeTo) {
@@ -7693,6 +7727,7 @@
                     return;
                 }
                 this.popup = chart.navigationBindings.popup;
+                console.log("this.popup", this.popup)
                 // show blank popup
                 this.showPopup();
                 // indicator form
@@ -8016,20 +8051,53 @@
                         htmlFor: selectName
                     }, null, parentDiv).appendChild(doc.createTextNode(lang[optionName] || optionName));
                     // select type
-                    selectBox = createElement(SELECT, {
+                    // selectBox = createElement(SELECT, {
+                    //     name: selectName,
+                    //     className: PREFIX + 'popup-field'
+                    // }, null, parentDiv);
+                    selectBox = createElement(INPUT, {
                         name: selectName,
-                        className: PREFIX + 'popup-field'
+                        className: PREFIX + 'popup-field' + ' select'
                     }, null, parentDiv);
                     selectBox.setAttribute('id', PREFIX + 'select-' + optionName);
-                    // list all series which have id - mandatory for creating indicator
-                    chart.series.forEach(function (serie) {
+                    selectBox.setAttribute('type', 'button');
+                    selectBox.linkedTo = chart.series[0].options.id;
+                    selectBox.seriesType = type;
+                    selectBox.setAttribute('value', chart.series[0].options.name);
+                    selectBox.setAttribute('style', "text-align:left");
+                    parentDiv.setAttribute('style', "position:relative;overflow:visible;");
+                    selectBox.addEventListener('click', () => {
+                        var selectOptions = document.getElementsByClassName('selectOption');
+                        for (var i = 0; i < selectOptions.length; i++)
+                            selectOptions[i].style.display = selectOptions[i].style.display == 'block' ? 'none' : 'block';
+                    })
+                    var icon = createElement('img', {
+                    }, null, parentDiv);
+                    icon.setAttribute('style', "width:20px;position:absolute;top:120px;right:20px");
+                    const arrowIcon = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjI4Njc0NzUxNjEzIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjI3MTUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48L3N0eWxlPjwvZGVmcz48cGF0aCBkPSJNODk1LjcwMTMzMyAzMDAuMTE3MzMzYzAgOS42LTMuMiAxOS4yODUzMzMtOS42IDI3LjM5MmwtMzQwLjkwNjY2NiA0MjMuODA4YTQzLjczMzMzMyA0My43MzMzMzMgMCAwIDEtNjguMDk2IDBMMTM3Ljk4NCAzMjkuMzAxMzMzQTQzLjY5MDY2NyA0My42OTA2NjcgMCAwIDEgMjA2LjA4IDI3NC42MDI2NjdsMzA1LjEwOTMzMyAzNzkuNjA1MzMzIDMwNi43NzMzMzQtMzgxLjUyNTMzM2E0My42OTA2NjcgNDMuNjkwNjY3IDAgMCAxIDc3LjczODY2NiAyNy40MzQ2NjZ6IiBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIuNjUiIHAtaWQ9IjI3MTYiPjwvcGF0aD48L3N2Zz4=';
+                    icon.setAttribute('src', arrowIcon);
+                    window.selectBox = selectBox;
+                    var ids = [];
+                    chart.series.forEach(function (serie, i) {
                         seriesOptions = serie.options;
-                        if (!seriesOptions.params &&
+                        if (!seriesOptions.params && ids.indexOf(seriesOptions.id) == -1 &&
                             seriesOptions.id &&
                             seriesOptions.id !== PREFIX + 'navigator-series') {
-                            createElement(OPTION, {
-                                value: seriesOptions.id
-                            }, null, selectBox).appendChild(doc.createTextNode(seriesOptions.name || seriesOptions.id));
+                            ids.push(seriesOptions.id);
+                            var option = createElement(DIV, {
+                                value: seriesOptions.id,
+                                className: 'selectOption'
+                            }, null, parentDiv);
+                            option.index = i;
+                            option.appendChild(doc.createTextNode(seriesOptions.name || seriesOptions.id));
+                            option.setAttribute('style', `display:none;top:${155 + i * 70}px;position:absolute;width:100%;height:70px;background:#3c3d41;color:#fff;text-align:left;line-height:70px;padding-left:20px`);
+                            option.addEventListener('click', function () {
+                                selectBox.linkedTo = chart.series[this.index].options.id;
+                                selectBox.setAttribute('value', chart.series[this.index].options.name);
+                                var selectOptions = document.getElementsByClassName('selectOption');
+                                for (var i = 0; i < selectOptions.length; i++)
+                                    selectOptions[i].style.display = 'none';
+                            })
                         }
                     });
                     if (defined(selectedOption)) {
@@ -8250,10 +8318,14 @@
             }
         };
         addEvent(NavigationBindings, 'showPopup', function (config) {
+
+            if (this.chart.isSubChart) {
+                return;
+            }
             // config.onSubmit();
             if (!this.popup) {
                 // Add popup to main container
-                this.popup = new H.Popup(this.chart.container, (this.chart.options.navigation.iconsURL ||
+                this.popup = new H.Popup(document.body, (this.chart.options.navigation.iconsURL ||
                     (this.chart.options.stockTools &&
                         this.chart.options.stockTools.gui.iconsURL) ||
                     'https://code.highcharts.com/9.1.2/gfx/stock-icons/'), this.chart);
@@ -8264,9 +8336,7 @@
                 mask.id = 'mask';
                 mask.className = 'mask';
                 document.body.appendChild(mask);
-                mask.addEventListener('click', function (e) {
-                    console.log("?", e)
-                })
+
             }
 
             this.popup.showForm(config.formType, this.chart, config.options, config.onSubmit);
