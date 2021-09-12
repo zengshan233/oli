@@ -6424,7 +6424,6 @@
                 if (this.chart) {
                     return;
                 }
-                console.log("chartchartchartchart", chart)
                 this.boundClassNames = void 0;
                 this.selectedButton = void 0;
                 this.chart = chart;
@@ -7727,7 +7726,6 @@
                     return;
                 }
                 this.popup = chart.navigationBindings.popup;
-                console.log("this.popup", this.popup)
                 // show blank popup
                 this.showPopup();
                 // indicator form
