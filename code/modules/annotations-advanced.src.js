@@ -8071,7 +8071,7 @@
                     })
                     var icon = createElement('img', {
                     }, null, parentDiv);
-                    icon.setAttribute('style', "width:20px;position:absolute;top:120px;right:20px");
+                    icon.className = 'stockArrow';
                     const arrowIcon = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjI4Njc0NzUxNjEzIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjI3MTUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48L3N0eWxlPjwvZGVmcz48cGF0aCBkPSJNODk1LjcwMTMzMyAzMDAuMTE3MzMzYzAgOS42LTMuMiAxOS4yODUzMzMtOS42IDI3LjM5MmwtMzQwLjkwNjY2NiA0MjMuODA4YTQzLjczMzMzMyA0My43MzMzMzMgMCAwIDEtNjguMDk2IDBMMTM3Ljk4NCAzMjkuMzAxMzMzQTQzLjY5MDY2NyA0My42OTA2NjcgMCAwIDEgMjA2LjA4IDI3NC42MDI2NjdsMzA1LjEwOTMzMyAzNzkuNjA1MzMzIDMwNi43NzMzMzQtMzgxLjUyNTMzM2E0My42OTA2NjcgNDMuNjkwNjY3IDAgMCAxIDc3LjczODY2NiAyNy40MzQ2NjZ6IiBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIuNjUiIHAtaWQ9IjI3MTYiPjwvcGF0aD48L3N2Zz4=';
                     icon.setAttribute('src', arrowIcon);
                     window.selectBox = selectBox;
@@ -8088,7 +8088,7 @@
                             }, null, parentDiv);
                             option.index = i;
                             option.appendChild(doc.createTextNode(seriesOptions.name || seriesOptions.id));
-                            option.setAttribute('style', `display:none;top:${155 + i * 70}px;position:absolute;width:100%;height:70px;background:#3c3d41;color:#fff;text-align:left;line-height:70px;padding-left:20px`);
+                            option.setAttribute('style', `display:none;top:${130 + i * 70}px;position:absolute;width:100%;height:70px;text-align:left;line-height:70px;padding-left:20px`);
                             option.addEventListener('click', function () {
                                 selectBox.linkedTo = chart.series[this.index].options.id;
                                 selectBox.setAttribute('value', chart.series[this.index].options.name);
