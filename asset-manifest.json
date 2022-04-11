@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.c79f9b66.chunk.css",
-    "main.js": "/static/js/main.25534977.chunk.js",
-    "main.js.map": "/static/js/main.25534977.chunk.js.map",
+    "main.css": "/static/css/main.300a4db8.chunk.css",
+    "main.js": "/static/js/main.e04889d1.chunk.js",
+    "main.js.map": "/static/js/main.e04889d1.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.0f5fbb80.js",
     "runtime-main.js.map": "/static/js/runtime-main.0f5fbb80.js.map",
     "static/css/2.d84d65d3.chunk.css": "/static/css/2.d84d65d3.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.02a3466d.chunk.js.map": "/static/js/2.02a3466d.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.d84d65d3.chunk.css.map": "/static/css/2.d84d65d3.chunk.css.map",
-    "static/css/main.c79f9b66.chunk.css.map": "/static/css/main.c79f9b66.chunk.css.map",
+    "static/css/main.300a4db8.chunk.css.map": "/static/css/main.300a4db8.chunk.css.map",
     "static/js/2.02a3466d.chunk.js.LICENSE.txt": "/static/js/2.02a3466d.chunk.js.LICENSE.txt",
     "static/media/Index.scss": "/static/media/LuloBold.59ba992d.woff2",
     "static/media/analysis.f8cc950f.svg": "/static/media/analysis.f8cc950f.svg",
@@ -29,9 +29,9 @@
     "static/media/recomm.852bfd65.mp4": "/static/media/recomm.852bfd65.mp4",
     "static/media/research.6fa58187.svg": "/static/media/research.6fa58187.svg",
     "static/media/research.e87b322d.mp4": "/static/media/research.e87b322d.mp4",
-    "static/media/research1.d066a57c.png": "/static/media/research1.d066a57c.png",
-    "static/media/research2.26fdf27d.png": "/static/media/research2.26fdf27d.png",
-    "static/media/research3.d1e83492.png": "/static/media/research3.d1e83492.png",
+    "static/media/research1.ed90da7b.png": "/static/media/research1.ed90da7b.png",
+    "static/media/research2.f822e0ff.png": "/static/media/research2.f822e0ff.png",
+    "static/media/research3.6fe9ddff.png": "/static/media/research3.6fe9ddff.png",
     "static/media/ui.ff297e38.mp4": "/static/media/ui.ff297e38.mp4",
     "static/media/user.90e53fc7.svg": "/static/media/user.90e53fc7.svg",
     "static/media/views.9805270a.mp4": "/static/media/views.9805270a.mp4",
@@ -41,7 +41,7 @@
     "static/js/runtime-main.0f5fbb80.js",
     "static/css/2.d84d65d3.chunk.css",
     "static/js/2.02a3466d.chunk.js",
-    "static/css/main.c79f9b66.chunk.css",
-    "static/js/main.25534977.chunk.js"
+    "static/css/main.300a4db8.chunk.css",
+    "static/js/main.e04889d1.chunk.js"
   ]
 }
